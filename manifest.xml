@@ -1,0 +1,19 @@
+<package>
+  <description brief="ardrone_islab">
+
+     ardrone_islab
+
+  </description>
+  <author>Trung Nguyen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ardrone_islab</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="ardrone_autonomy"/>
+
+
+</package>
+
+

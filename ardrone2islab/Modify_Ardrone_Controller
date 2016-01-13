@@ -1,0 +1,44 @@
+
+#===== Compile the code for controller =====#
+- Set up complier environment
+$ codesourcery-arm-2009q3.sh
+
+- cd into the working folder and make
+$ cd ardrone2islab
+$ make
+
+#===== Download into Ardrone =====#
+- Ftp ip of Ardrone
+$ ftp 192.168.1.1
+Press Enter
+- Put the executed file into Ardrone
+$ put fly_islab
+
+#===== Run the download file =====#
+$ telnet 192.168.1.1
+$ ./data/video/fly_islab
+
+#===== Reboot the download file =====#
+$ telnet 192.168.1.1
+$ ./sbin/reboot
+
+#===== Change Ardrone IP address =====#
+echo "./data/wifi.sh" | telnet 192.168.1.1
+
+**
+ * @file boards/ardrone/navdata.c
+ * ardrone2 navdata aquisition driver.
+ *
+ * The ardrone2 provides a navdata stream of packets
+ * containing info about all sensors at a rate of 200Hz.
+
+arm-none-linux-gnueabi-g++ -lpthread -o navdata_test navdata_test.c gpio_ardrone.c 
+ */
+
+for pid
+
+arm-none-linux-gnueabi-g++ -lpthread -o fly_islab_pid main_fly_islab_pid.c $(CURDIR)/navdata_islab/gpio_ardrone.c $(CURDIR)/gpio/gpio.c $(CURDIR)/udp/udp.c $(CURDIR)/util/util.c $(CURDIR)/navdata_islab/navdata_islab.c $(CURDIR)/navdata_islab/estimate_rincf_drone/estimate_rincf_drone.c $(CURDIR)/navdata_islab/quat2rpy/quat2rpy.c $(CURDIR)/navdata_islab/rpy2quat/rpy2quat.c $(CURDIR)/navdata_islab/transform_mag/transform_mag.c $(CURDIR)/navdata_islab/rpy2quat/rt_nonfinite.c $(CURDIR)/navdata_islab/rpy2quat/rtGetNaN.c $(CURDIR)/navdata_islab/rpy2quat/rtGetInf.c $(CURDIR)/motorboard/mot.c $(CURDIR)/motorboard/motorboard.c pid.c controlthread_pid.c 
+
+for gc
+
+arm-none-linux-gnueabi-g++ -lpthread -o fly_islab_gc main_fly_islab_gc.c $(CURDIR)/navdata_islab/gpio_ardrone.c $(CURDIR)/gpio/gpio.c $(CURDIR)/udp/udp.c $(CURDIR)/util/util.c $(CURDIR)/navdata_islab/navdata_islab.c $(CURDIR)/navdata_islab/estimate_rincf_drone/estimate_rincf_drone.c $(CURDIR)/navdata_islab/quat2rpy/quat2rpy.c $(CURDIR)/navdata_islab/rpy2quat/rpy2quat.c $(CURDIR)/navdata_islab/transform_mag/transform_mag.c $(CURDIR)/navdata_islab/rpy2quat/rt_nonfinite.c $(CURDIR)/navdata_islab/rpy2quat/rtGetNaN.c $(CURDIR)/navdata_islab/rpy2quat/rtGetInf.c $(CURDIR)/motorboard/mot.c $(CURDIR)/motorboard/motorboard.c pid.c controlthread_gc.c  $(CURDIR)/C_code_geometric_controller/C_code_geometric_controller_2.c $(CURDIR)/C_code_geometric_controller/angle2dcmzyx.c $(CURDIR)/C_code_geometric_controller/C_code_geometric_controller_data.c $(CURDIR)/C_code_geometric_controller/C_code_geometric_controller_initialize.c $(CURDIR)/C_code_geometric_controller/C_code_geometric_controller_terminate.c $(CURDIR)/C_code_geometric_controller/inversehat.c $(CURDIR)/C_code_geometric_controller/norm.c $(CURDIR)/C_code_geometric_controller/transformHat.c

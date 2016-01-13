@@ -1,0 +1,3 @@
+main_fly_islab:
+	arm-none-linux-gnueabi-g++ -lpthread -o fly_islab_pid main_fly_islab_pid.c $(CURDIR)/navdata_islab/gpio_ardrone.c $(CURDIR)/gpio/gpio.c $(CURDIR)/udp/udp.c $(CURDIR)/util/util.c $(CURDIR)/navdata_islab/navdata_islab.c $(CURDIR)/navdata_islab/estimate_rincf_drone/estimate_rincf_drone.c $(CURDIR)/navdata_islab/quat2rpy/quat2rpy.c $(CURDIR)/navdata_islab/rpy2quat/rpy2quat.c $(CURDIR)/navdata_islab/transform_mag/transform_mag.c $(CURDIR)/navdata_islab/rpy2quat/rt_nonfinite.c $(CURDIR)/navdata_islab/rpy2quat/rtGetNaN.c $(CURDIR)/navdata_islab/rpy2quat/rtGetInf.c $(CURDIR)/motorboard/mot.c $(CURDIR)/motorboard/motorboard.c pid.c controlthread_pid.c 
+
